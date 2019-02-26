@@ -18,8 +18,11 @@ namespace Tarea2_WCF
     //}
     public class Tarea2_WCF_Service1 : DataService<ExamenAnalisisEntities>
     {
-
+        public static void InitializeService(DataServiceConfiguration config)
+        {
+            config.SetEntitySetAccessRule("*", EntitySetRights.All);
+        }
         
-        config.SetEntitySetAccessRule("*", EntitySetRights.All);
+       
     }
 }
