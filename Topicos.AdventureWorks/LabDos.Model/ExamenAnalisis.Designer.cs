@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\jsezu\Downloads\2019-1-TopicosElectiva-master\Topicos.AdventureWorks\LabDos.Model\ExamenAnalisis.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\jsezu\Documents\GitHub\TopicosTrabajoClase2\Topicos.AdventureWorks\LabDos.Model\ExamenAnalisis.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

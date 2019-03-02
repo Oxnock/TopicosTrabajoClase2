@@ -81,12 +81,6 @@
     <None Include="Properties\DataSources\Topicos.AdventureWorks.Model.Product.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Topicos.AdventureWorks.Model\Topicos.AdventureWorks.Model.csproj">
-      <Project>{aadac5de-aab0-4f00-893e-6dd75788aead}</Project>
-      <Name>Topicos.AdventureWorks.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
