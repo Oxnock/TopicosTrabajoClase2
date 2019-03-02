@@ -24,17 +24,19 @@ namespace LabDos.WCF.Dominio.Repositorio
         {
             IList<Estacionamiento> elResultado = new List<Estacionamiento>();
             elResultado = _contexto.Estacionamientoes.Where(
-                p => fechaFinal <= p.FechaHoraSalida && p.FechaHoraIngresp <= fechaInicial).OrderByDescending(o => o.Name).ToList();
-            var elNuevoResultado = CompletarPropiedadesDeNavegacion(elResultado);
-            return elNuevoResultado;
+                p => fechaFinal <= p.FechaHoraSalida && p.FechaHoraIngresp <= fechaInicial).OrderByDescending(o => o.FechaHoraIngreso).ToList();
+            return elResultado;
         }
         internal IList<Estacionamiento> ListarEstacionamientoPorProvincia(string provincia)
         {
             IList<Estacionamiento> elResultado = new List<Estacionamiento>();
-            elResultado = _contexto.Estacionamientoes.Where(
-                p => provincia <= p.ListPrice && p.ListPrice <= precioSuperior).OrderByDescending(o => o.Name).ToList();
-            var elNuevoResultado = CompletarPropiedadesDeNavegacion(elResultado);
-            return elNuevoResultado;
+
+            elResultado = _contexto.Database.SqlQuery<string>(
+       "Select IDParqueo, IDVehiculo From Estacionamiento Where IDParqueo " +
+       "IN select ConsecutivoDistrito From Parqueo  Where ConsecutivoDistrito " +
+       "IN Select IDCanton From Distrito Where ID Canton IN Select ID Provincia " +
+       "From Canton Where IDProvincia IN Select Descripcion From Provincia where IDProvincia==" + provincia).ToList();
+            return elResultado;
         }
 
 
