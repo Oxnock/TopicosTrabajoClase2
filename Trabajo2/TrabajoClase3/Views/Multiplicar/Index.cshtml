@@ -1,0 +1,15 @@
+﻿@model TrabajoClase3.Models.Multiplicacion
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+    < fieldset > < legend style = "color:blue" > Lab 3 :vvv < /legend>
+    @Html.EditorFor(x => x.NumeroA) < br / > 
+    < br / > @Html.EditorFor(x => x.NumeroB) < br / > < br / > 
+    < input type = "submit"
+    value = "multiplicar"
+    name = "command" / >  < br / > < br / > < h2 style = "color:red" > @Html.Label("El resultado es :")
+    @Html.DisplayFor(x => x.Resultado) < /h2> < /fieldset>
+    

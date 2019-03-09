@@ -1,0 +1,13 @@
+﻿@model TrabajoClase3.Models.Multiplicacion
+@{
+    ViewBag.Title = "Home Page";
+}
+<h1>Multiplicacion</h1>
+<fieldset>
+    @Html.EditorFor(x=>x.NumeroA)<br><br/>
+    @Html.EditorFor(x=>x.NumeroB)<br><br/>
+    <input type="submit" value="multiplicar" name="command"/>
+    <h2 style="color:blue">@Html.Label("El resultado es: ")
+    @Html.EditorFor(x=>x.Resultado)
+    </h2>
+</fieldset>
