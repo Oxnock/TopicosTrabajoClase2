@@ -9,11 +9,12 @@ namespace TrabajoClase3.Controllers
 {
     public class MultiplicarController : Controller
     {
-        // GET: Multiplicar
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
+        [HttpPost]
         public ActionResult Index(Multiplicacion model, string command)
         {
             if (command=="multiplicar")

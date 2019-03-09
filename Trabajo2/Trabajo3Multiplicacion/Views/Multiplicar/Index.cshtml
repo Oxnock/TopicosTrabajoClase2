@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model Trabajo3Multiplicacion.Models.Multiplicar
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend style="color:blue"> Multiplicacion o suma </legend>
+        @Html.EditorFor(x => x.A) <br /> <br /> @Html.EditorFor(x => x.B) <br /> <br />
+        <input type="checkbox" name="Multi" value="true">Multiplicar<br>
+        <br /> <br />
+
+        <input type="submit"
+               value="Realizar"
+               name="command" />
+        <br /> <br />
+        <h2 style="color:red">
+            @Html.Label("El resultado es :")
+            @Html.DisplayFor(x => x.Resultado)
+        </h2>
+    </fieldset>
+}   
