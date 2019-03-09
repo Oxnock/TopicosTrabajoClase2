@@ -14,27 +14,21 @@ namespace Trabajo2_WCF
     public class Service1 : IService1
     {
 
-        public IList<Estacionamiento> ListadoderegistrosenEstacionamientoporrangodefechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida)
+        public IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorRangoDeFechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida)
         {
             var laEspecificacion = new Trabajo2_WCF.Dominio.Especificacion.Estacionamientos();
-            var elResultado = laEspecificacion.ListadoderegistrosenEstacionamientoporrangodefechas(FechaHoraIngreso, FechaHoraSalida);
+            var elResultado = laEspecificacion.ListadoDeRegistrosEnEstacionamientoPorRangoDeFechas(FechaHoraIngreso, FechaHoraSalida);
             return elResultado;
         }
 
-        public IList<Estacionamiento> ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(string NombreProvincia)
+        public IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEncuentraElParqueo(string NombreProvincia)
         {
             var LaEspecificacion = new Trabajo2_WCF.Dominio.Especificacion.Estacionamientos();
-            var elResultado = LaEspecificacion.ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(NombreProvincia);
+            var elResultado = LaEspecificacion.ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEncuentraElParqueo(NombreProvincia);
             return elResultado;
         }
 
-        //public IList<Provincia> ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(int NombreProvincia)
-        //{
-        //    var laEspecificacion = new Proyecto2.Wfc.Dominio.Especificacion.Provincias();
-        //    var elResultado = laEspecificacion.ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(NombreProvincia);
-        //    return elResultado;
-        //}
-
+     
 
         public string GetData(int value)
         {

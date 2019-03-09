@@ -14,13 +14,13 @@ namespace Trabajo2_WCF.Dominio.Interfaz
     {
 
         [OperationContract]
-        IList<Estacionamiento> ListadoderegistrosenEstacionamientoporrangodefechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida);
+        IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorRangoDeFechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida);
 
         //[OperationContract]
-        //IList<Provincia> ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(int NombreProvincia);
+        //IList<Provincia> ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEncuentraElParqueo(int NombreProvincia);
 
         [OperationContract]
-        IList<Estacionamiento> ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(string NombreProvincia);
+        IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEncuentraElParqueo(string NombreProvincia);
 
 
         [OperationContract]

@@ -12,7 +12,7 @@ namespace Trabajo2_Test
         {
             //Arrange
             var unitTest = new Trabajo2_Test.EstacionamientoServices.Service1Client();
-            var provincia = "Guanacaste";
+            var provincia = "Cartago";
             var cantidadDeRegistrosEsperada = 5;
             var cantidadDeRegistrosReal = 0;
             var elResultado = unitTest.ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(provincia);

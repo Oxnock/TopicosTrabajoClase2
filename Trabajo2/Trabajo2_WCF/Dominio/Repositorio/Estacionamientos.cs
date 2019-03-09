@@ -22,7 +22,7 @@ namespace Trabajo2_WCF.Dominio.Repositorio
             _contexto.Configuration.LazyLoadingEnabled = lazyLoadingEnabled;
         }
 
-        internal IList<Estacionamiento> ListadoderegistrosenEstacionamientoporrangodefechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida)
+        internal IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorRangodeFechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida)
         {
             IList<Estacionamiento> elResultado = new List<Estacionamiento>();
 
@@ -32,11 +32,9 @@ namespace Trabajo2_WCF.Dominio.Repositorio
             return elResultado;
         }
 
-        internal IList<Estacionamiento> ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(string NombreProvincia)
+        internal IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEncuentraElParqueo(string NombreProvincia)
         {
-            //select * from Estacionamiento E right join Parqueo P on E.IDParqueo = P.IDParqueo
-            //JOIN Distrito D on P.ConsecutivoDistrito = D.ConsecutivoDistrito INNER JOIN
-            //Provincia Pr on D.IDProvincia = Pr.IDProvincia = where Pr.Descripcion = 'Guanacaste';
+           
 
             IList<Estacionamiento> elResultado = new List<Estacionamiento>();
 

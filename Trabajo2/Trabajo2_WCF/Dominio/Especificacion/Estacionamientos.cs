@@ -8,17 +8,17 @@ namespace Trabajo2_WCF.Dominio.Especificacion
 {
     public class Estacionamientos
     {
-        public IList<Estacionamiento> ListadoderegistrosenEstacionamientoporrangodefechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida)
+        public IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorRangoDeFechas(DateTime FechaHoraIngreso, DateTime FechaHoraSalida)
         {
             var laAccion = new Accion.Estacionamientos();
-            var elResultado = laAccion.ListadoderegistrosenEstacionamientoporrangodefechas(FechaHoraIngreso, FechaHoraSalida);
+            var elResultado = laAccion.ListadoDeRegistrosEnEstacionamientoPorRangoDeFechas(FechaHoraIngreso, FechaHoraSalida);
             return elResultado;
         }
 
-        public IList<Estacionamiento> ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(string NombreProvincia)
+        public IList<Estacionamiento> ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEncuentraElParqueo(string NombreProvincia)
         {
             var laAccion = new Accion.Estacionamientos();
-            var elResultado = laAccion.ListadoderegistrosenEstacionamientoporprovinciaenqueseencuentraelparqueo(NombreProvincia);
+            var elResultado = laAccion.ListadoDeRegistrosEnEstacionamientoPorProvinciaEnQueSeEnuentraElParqueo(NombreProvincia);
             return elResultado;
         }
 
